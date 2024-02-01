@@ -1,0 +1,246 @@
+* {
+    margin: 0; /*make the webpage fill out the window*/
+}
+.headline{
+    display: flex;
+    background-color: #E8C872;
+    height: 70px;
+    align-items: center;
+    font-family: Georgia, serif;
+}
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    margin-left:10px;
+}
+.category{
+    display: flex;
+    justify-content: flex-end; /*go to the left*/
+    flex: auto;
+}
+.home{
+    width: 10%;
+    text-align:center;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: black;
+}
+.about{
+    width: 10%;
+    text-align:center;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: black;
+}
+.projects{
+    width: 10%;
+    text-align:center;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: black;
+}
+.posts{
+    width: 10%;
+    text-align:center;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: black;
+}
+.cello{
+    width: 10%;
+    text-align:center;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color: black;
+}
+.list2{
+    display:none;
+    position:fixed;
+    background-color: #FFF3CF;
+    top: 10px;
+    right: 10px;
+    width:100px;
+    height:400px;
+}
+.it0{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    background-color: #FFF3CF;
+}
+.it1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    background-color: #FFF3CF;
+}
+.it2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    background-color: #FFF3CF;
+}
+.it3{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    background-color: #FFF3CF;
+}
+.it4{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    background-color: #FFF3CF;
+}
+.listpicture{
+    display:flex;
+    width:50%;
+    text-align:end;
+    flex:auto;
+    margin:10px;
+    display:none;
+}
+
+.welcome1{
+    justify-content:center;
+    align-items:center;
+    position: inline-block;
+    height:300px;
+    background-color:#C9D7DD;
+    display:flex;
+    font-family: Georgia, serif;
+}
+.welcome2{
+    justify-content:center;
+    align-items:center;
+    position: inline-block;
+    height:300px;
+    background-color:#C9D7DD;
+    display:none;
+    font-family: Georgia, serif;
+}
+.text{
+    text-align: center;
+    font-size:50px;
+    font-weight:bold;
+}
+.subject{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:50px;
+}
+.menu{
+    font-size:30px;
+    font-weight:bold;
+    font-family: Georgia, serif;
+}
+
+.section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+.section1{
+    display:flex;
+    flex:none;
+    width:45%;
+    height:400px;
+    margin:10px;
+    background-color: #637A9F;
+    justify-content:center;
+    align-items:center;
+}
+.section1 a{
+    width:90%;
+    height:90%;
+    justify-content:center;
+    align-items:center;
+}
+.section1 img{
+    width:100%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+}
+.section2{
+    display:flex;
+    flex:none;
+    width:45%;
+    height:400px;
+    margin:10px;
+    background-color: #637A9F;
+    justify-content:center;
+    align-items:center;
+}
+.section2 iframe{
+    width:90%;
+    height:90%;
+    justify-content:center;
+    align-items:center;
+}
+.t1{
+    font-size:20px;
+    font-weight:bold;
+}
+.t2{
+    font-size:20px;
+    font-weight:bold;
+}
+.t3{
+    font-size:20px;
+    font-weight:bold;
+}
+.t4{
+    font-size:20px;
+    font-weight:bold;
+}
+@media (max-width:500px){
+    .list1{
+        display:none;
+    }
+    .listpicture{
+        display:block;
+    }
+}
+
+.footer {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFACD;
+}
+.footer_content {
+    font-family: Georgia, serif;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    color: black;
+    text-decoration: none;
+  }
