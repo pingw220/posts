@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        UW CSE 414 - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{background:#fff;color:#333;display:block;overflow-x:auto;padding:.5em}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{background-color:#eaffea;color:#55a532}.hljs-deletion{background-color:#ffecec;color:#bd2c00}.hljs-link{text-decoration:underline}.markdown-body{word-wrap:break-word;font-size:16px;line-height:1.5}.markdown-body:after,.markdown-body:before{content:"";display:table}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-bottom:16px;margin-top:0}.markdown-body hr{background-color:#e7e7e7;border:0;height:.25em;margin:24px 0;padding:0}.markdown-body blockquote{border-left:.25em solid #ddd;color:#777;font-size:16px;padding:0 1em}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{background-color:#fcfcfc;border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb;color:#555;display:inline-block;font-size:11px;line-height:10px;padding:3px 5px;vertical-align:middle}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{font-weight:600;line-height:1.25;margin-bottom:16px;margin-top:24px}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{border-bottom:1px solid #eee;padding-bottom:.3em}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{color:#777;font-size:.85em}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{list-style-type:none;padding:0}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-bottom:0;margin-top:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{font-size:1em;font-style:italic;font-weight:700;margin-top:16px;padding:0}.markdown-body dl dd{margin-bottom:16px;padding:0 16px}.markdown-body table{display:block;overflow:auto;width:100%;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{border:1px solid #ddd;padding:6px 13px}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{background-color:#fff;box-sizing:initial;max-width:100%}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{background-color:initial;max-width:none;vertical-align:text-top}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{border:1px solid #ddd;display:block;float:left;margin:13px 0 0;overflow:hidden;padding:7px;width:auto}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{clear:both;color:#333;display:block;padding:5px 0 0}.markdown-body span.align-center{clear:both;display:block;overflow:hidden}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{clear:both;display:block;overflow:hidden}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{background-color:#0000000a;border-radius:3px;font-size:85%;margin:0;padding:.2em 0}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{content:"\00a0";letter-spacing:-.2em}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{background:#0000;border:0;font-size:100%;margin:0;padding:0;white-space:pre;word-break:normal}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{border-radius:3px;font-size:85%;line-height:1.45;overflow:auto}.markdown-body:not(.next-editor) pre{background-color:#f7f7f7;padding:16px}.markdown-body pre code,.markdown-body pre tt{word-wrap:normal;background-color:initial;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{background:#fff;border:0;padding:10px 8px 9px;text-align:right}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{background:#f8f8f8;border-top:0;font-weight:700}.news .alert .markdown-body blockquote{border:0;padding:0 0 0 40px}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{cursor:default!important;float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle}.markdown-body{max-width:758px;overflow:visible!important;padding-bottom:40px;padding-top:40px;position:relative}.markdown-body.next-editor{overflow-x:hidden!important}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{border-right:3px solid #6ce26c!important;box-sizing:initial;color:#afafaf!important;cursor:default;display:inline-block;min-width:20px;padding:0 8px 0 0;position:relative;text-align:right;z-index:4}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-bottom:none;border-left:none;border-top:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-collapse:inherit!important;border-spacing:0}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{margin-bottom:unset;overflow:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert{display:flex;flex-direction:column;gap:16px}.markdown-body .alert>*{margin:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{background-color:inherit;border-radius:0;overflow:visible;text-align:center;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{height:100%;max-width:100%}.markdown-body pre>code.wrap{word-wrap:break-word;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{background-color:#000;background-position:50%;background-repeat:no-repeat;background-size:contain;cursor:pointer;display:table;overflow:hidden;text-align:center}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{object-fit:contain;width:100%;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{height:100%;left:0;position:absolute;top:0;width:100%}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{color:#fff;height:auto;left:50%;opacity:.3;position:absolute;top:50%;transform:translate(-50%,-50%);transition:opacity .2s;width:auto;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.figma{display:table;padding-bottom:56.25%;position:relative;width:100%}.figma iframe{border:1px solid #eee;bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.markmap-container{height:300px}.markmap-container>svg{height:100%;width:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{color:#777;margin:25px auto -25px;max-width:760px;position:relative;z-index:2}.toc .invisable-node{list-style-type:none}.ui-toc{bottom:20px;position:fixed;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{border-bottom-left-radius:0;border-top-left-radius:0;height:40px;padding:10px 4px}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{color:#fff;opacity:1;transition:opacity .2s}.ui-toc-label:focus{background-color:#ccc;color:#000;opacity:.3}.ui-toc-label:hover{background-color:#ccc;opacity:1;transition:opacity .2s}.ui-toc-dropdown{margin-bottom:20px;margin-top:20px;max-height:70vh;max-width:45vw;overflow:auto;padding-left:10px;padding-right:10px;text-align:inherit;width:25vw}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{letter-spacing:.0029em;padding-right:0}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{color:#767676;display:block;font-size:13px;font-weight:500;padding:4px 20px}.ui-toc-dropdown .nav>li:first-child:last-child>ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{background-color:initial;border-left:1px solid #000;color:#000;padding-left:19px;text-decoration:none}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{border-left:none;border-right:1px solid #000;padding-right:19px}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{background-color:initial;border-left:2px solid #000;color:#000;font-weight:700;padding-left:18px}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{border-left:none;border-right:2px solid #000;padding-right:18px}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:30px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{font-size:12px;font-weight:400;padding-bottom:1px;padding-left:40px;padding-top:1px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{font-weight:500;padding-left:28px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{font-weight:500;padding-left:38px}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{max-height:70vh;max-width:15vw;overflow:auto;position:fixed;top:0}.back-to-top,.expand-toggle,.go-to-bottom{color:#999;display:block;font-size:12px;font-weight:500;margin-left:10px;margin-top:10px;padding:4px 10px}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{background-position:50%;background-repeat:no-repeat;background-size:cover;border-radius:50%;display:block;height:20px;margin-bottom:2px;margin-right:5px;margin-top:2px;width:20px}.ui-user-icon.small{display:inline-block;height:18px;margin:0 0 .2em;vertical-align:middle;width:18px}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;padding-left:22px;text-decoration:none}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}.inline-spoiler-section{cursor:pointer}.inline-spoiler-section .spoiler-text{background-color:#333;border-radius:2px}.inline-spoiler-section .spoiler-text>*{opacity:0}.inline-spoiler-section .spoiler-img{filter:blur(10px)}.inline-spoiler-section.raw{background-color:#333;border-radius:2px}.inline-spoiler-section.raw>*{opacity:0}.inline-spoiler-section.unveil{cursor:auto}.inline-spoiler-section.unveil .spoiler-text{background-color:#3333331a}.inline-spoiler-section.unveil .spoiler-text>*{opacity:1}.inline-spoiler-section.unveil .spoiler-img{filter:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{color:#222;position:relative;z-index:1}.markdown-body.slides:before{background-color:currentColor;bottom:0;box-shadow:0 0 0 50vw;content:"";display:block;left:0;position:absolute;right:0;top:0;z-index:-1}.markdown-body.slides section[data-markdown]{background-color:#fff;margin-bottom:1.5em;position:relative;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{left:1em;max-height:100%;overflow:hidden;position:absolute;right:1em;top:50%;transform:translateY(-50%)}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{border:3px solid #777;content:"";height:1.5em;position:absolute;right:1em;top:-1.5em}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}svg{text-shadow:none}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-inner comment-enabled" data-hard-breaks="true"><h1 id="UW-CSE-414" data-id="UW-CSE-414"><a class="anchor hidden-xs" href="#UW-CSE-414" title="UW-CSE-414"><span class="octicon octicon-link"></span></a><span>UW CSE 414</span></h1><h2 id="Resource" data-id="Resource"><a class="anchor hidden-xs" href="#Resource" title="Resource"><span class="octicon octicon-link"></span></a><span>Resource</span></h2><ul>
+<li><a href="https://sites.google.com/cs.washington.edu/cse414-24wi" target="_blank" rel="noopener"><span>Course Website</span></a></li>
+<li><a href="https://docs.google.com/document/d/1sBZX7QOy7wmu1seclG5O5VZBO4F3ZbTdt0tlrA6gH6A/edit?pli=1" target="_blank" rel="noopener"><span>Syllabus</span></a></li>
+</ul><h2 id="202413-Leture" data-id="202413-Leture"><a class="anchor hidden-xs" href="#202413-Leture" title="202413-Leture"><span class="octicon octicon-link"></span></a><span>2024/1/3 Leture</span></h2><h3 id="Course-materials" data-id="Course-materials"><a class="anchor hidden-xs" href="#Course-materials" title="Course-materials"><span class="octicon octicon-link"></span></a><span>Course materials</span></h3><ul>
+<li><a href="https://drive.google.com/file/d/1WsBHwExOcfSgrcosHQ4YD03L4exsRiJV/view" target="_blank" rel="noopener"><span>slides</span></a></li>
+<li><span>reading: 2.1 ~ 3</span></li>
+</ul><h3 id="Database-Management-System-DBMSs" data-id="Database-Management-System-DBMSs"><a class="anchor hidden-xs" href="#Database-Management-System-DBMSs" title="Database-Management-System-DBMSs"><span class="octicon octicon-link"></span></a><span>Database Management System (DBMSs)</span></h3><p><strong><span>Definition of DBMSs:</span></strong><br>
+<span>“A big program written by someone else that allows us</span><br>
+<span>to manage efficiently a large database and allows it to</span><br>
+<span>persist over long periods of time”</span></p><p><strong><span>Examples of DMBSs</span></strong></p><ul>
+<li><span>Oracle, IBM DB2, Microsoft SQL Server, Vertica, Teradata</span></li>
+<li><span>Open source: MySQL (Sun/Oracle), PostgreSQL, CouchDB</span></li>
+<li><span>Open source library: SQLite</span></li>
+</ul><h3 id="3-parts-of-a-Data-Model" data-id="3-parts-of-a-Data-Model"><a class="anchor hidden-xs" href="#3-parts-of-a-Data-Model" title="3-parts-of-a-Data-Model"><span class="octicon octicon-link"></span></a><span>3 parts of a Data Model</span></h3><ul>
+<li><span>Instance: the actual data</span></li>
+<li><span>Schema: a description of what data is being stored</span></li>
+<li><span>Query Language: how to retrieve and manipulate data</span></li>
+</ul><table>
+<thead>
+<tr>
+<th><span>Schema 1</span></th>
+<th><span>Schema 2</span></th>
+<th><span>Schema 3</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Instance 1</span></td>
+<td><span>Instance 2</span></td>
+<td><span>Instance 3</span></td>
+</tr>
+</tbody>
+</table><h2 id="HW1" data-id="HW1"><a class="anchor hidden-xs" href="#HW1" title="HW1"><span class="octicon octicon-link"></span></a><span>HW1</span></h2><h3 id="Resource1" data-id="Resource"><a class="anchor hidden-xs" href="#Resource1" title="Resource1"><span class="octicon octicon-link"></span></a><span>Resource</span></h3><ul>
+<li><a href="https://www.sqlite.org/whentouse.html" target="_blank" rel="noopener"><span>When to use SQLite and when not to use it.</span></a></li>
+<li><span>A </span><a href="https://www.pantz.org/software/sqlite/sqlite_commands_and_general_usage" target="_blank" rel="noopener"><span>simple guide</span></a><span> for commonly used command-line functions in SQLite.</span></li>
+<li><a href="https://www.sqlite.org/cli.html" target="_blank" rel="noopener"><span>More information</span></a><span> on formatting output in SQLite.</span></li>
+<li><a href="https://www.sqlite.org/lang.html" target="_blank" rel="noopener"><span>An index</span></a><span> of more detailed information for SQL commands in SQLite.</span></li>
+<li><span>A </span><a href="https://www.sqlstyle.guide" target="_blank" rel="noopener"><span>SQL style guide</span></a><span> in case you are interested (FYI only).</span></li>
+</ul><h3 id="basic-command" data-id="basic-command"><a class="anchor hidden-xs" href="#basic-command" title="basic-command"><span class="octicon octicon-link"></span></a><span>basic command</span></h3><pre><code class="sql hljs">.help: <span class="hljs-keyword">To</span> <span class="hljs-keyword">view</span> help contents
+.tables: <span class="hljs-keyword">To</span> <span class="hljs-keyword">view</span> a list <span class="hljs-keyword">of</span> <span class="hljs-keyword">all</span> your tables
+.exit: <span class="hljs-keyword">To</span> exit
+</code></pre><h4 id="Create-a-file-to-store-the-data" data-id="Create-a-file-to-store-the-data"><a class="anchor hidden-xs" href="#Create-a-file-to-store-the-data" title="Create-a-file-to-store-the-data"><span class="octicon octicon-link"></span></a><span>Create a file to store the data</span></h4><pre><code class="sql hljs">sqlite3 HW1.db <span class="hljs-operator">/</span><span class="hljs-operator">/</span> type <span class="hljs-keyword">in</span> the terminal
+</code></pre><h4 id="Create-a-table" data-id="Create-a-table"><a class="anchor hidden-xs" href="#Create-a-table" title="Create-a-table"><span class="octicon octicon-link"></span></a><span>Create a table</span></h4><ul>
+<li><span>Write the SQL statement to create a table Edges(Source, Destination) where both Source and Destination are integers.</span></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Edges(Source <span class="hljs-type">INT</span>, Destination <span class="hljs-type">INT</span>);
+</code></pre><ul>
+<li><span>Create a table called MyRestaurants with the following attributes (you can pick your own names for the attributes, just make sure it is clear which one is for which):</span><br>
+<span>a. Name of the restaurant: a varchar field</span><br>
+<span>b. Type of food they make: a varchar field</span><br>
+<span>c. Distance (in minutes) from your house: an int</span><br>
+<span>d. Date of your last visit: a varchar field, interpreted as date</span><br>
+<span>e. Whether you like it or not: an int, interpreted as a Boolean</span></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> MyRestaurants(Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>), FoodType <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>), Distance <span class="hljs-type">INT</span>, <span class="hljs-type">Date</span> <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>), Feedback <span class="hljs-type">INT</span>);
+</code></pre><h4 id="Insert-tuples" data-id="Insert-tuples"><a class="anchor hidden-xs" href="#Insert-tuples" title="Insert-tuples"><span class="octicon octicon-link"></span></a><span>Insert tuples</span></h4><ul>
+<li><span>insert into Edges</span></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Edges <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">10</span>, <span class="hljs-number">5</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Edges <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">6</span>, <span class="hljs-number">25</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Edges <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Edges <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>);
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Edges <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'-1'</span>, <span class="hljs-string">'2000'</span>); <span class="hljs-operator">/</span><span class="hljs-operator">/</span> Type Affinity
+</code></pre><ul>
+<li><span>Insert into MyRestaurants</span></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> MyRestaurants <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'Thai Tom'</span>, <span class="hljs-string">'Thai'</span>, <span class="hljs-number">15</span>, <span class="hljs-string">'2024-01-04'</span>, <span class="hljs-number">1</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> MyRestaurants <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'Green Island'</span>, <span class="hljs-string">'Chinese'</span>, <span class="hljs-number">25</span>, <span class="hljs-string">'2024-01-02'</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> MyRestaurants <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'DTF'</span>, <span class="hljs-string">'Taiwanese'</span>, <span class="hljs-number">23</span>, <span class="hljs-string">'2024-01-01'</span>, <span class="hljs-number">1</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> MyRestaurants <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'Poke'</span>, <span class="hljs-string">'Japanese'</span>, <span class="hljs-number">10</span>, <span class="hljs-string">'2024-01-06'</span>, <span class="hljs-number">0</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> MyRestaurants <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'Local Point'</span>, <span class="hljs-string">'American'</span>, <span class="hljs-number">5</span>, <span class="hljs-string">'2024-01-07'</span>, <span class="hljs-keyword">NULL</span>);
+</code></pre><h4 id="Print-out-the-table" data-id="Print-out-the-table"><a class="anchor hidden-xs" href="#Print-out-the-table" title="Print-out-the-table"><span class="octicon octicon-link"></span></a><span>Print out the table</span></h4><ul>
+<li><span>Print out Edges</span></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Edges; <span class="hljs-operator">/</span><span class="hljs-operator">/</span> print <span class="hljs-keyword">out</span> the whole <span class="hljs-keyword">table</span>
+
+<span class="hljs-number">10</span><span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-number">6</span><span class="hljs-operator">|</span><span class="hljs-number">25</span>
+<span class="hljs-number">1</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+
+<span class="hljs-keyword">SELECT</span> Source <span class="hljs-keyword">FROM</span> Edges; <span class="hljs-operator">/</span><span class="hljs-operator">/</span> print <span class="hljs-keyword">out</span> the <span class="hljs-keyword">specific</span> <span class="hljs-keyword">column</span>
+
+<span class="hljs-number">10</span>
+<span class="hljs-number">6</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">4</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Edges <span class="hljs-keyword">WHERE</span> Source <span class="hljs-operator">&gt;</span> Destination; <span class="hljs-operator">/</span><span class="hljs-operator">/</span> <span class="hljs-keyword">condition</span>
+
+<span class="hljs-number">10</span><span class="hljs-operator">|</span><span class="hljs-number">5</span>
+</code></pre><ul>
+<li><span>Print out MyRestaurants:</span><br>
+<span>write the code (command and query) to return the results in these three formats:</span></li>
+</ul><ol>
+<li><span>print the results in comma-separated form</span></li>
+<li><span>print the results in list form, delimited by | (vertical line character)</span></li>
+<li><span>print the results in column form where every column has width &gt;= 15. Every column must have this width, not just the first one.</span></li>
+<li><span>Write a SQL query that returns only the name and distance of all restaurants within and including 20 minutes of your house. The query should list the restaurants alphabetically by name.</span></li>
+<li><span>Write a SQL query that returns all attributes of all restaurants that you like, but have not visited for more than 3 months ago (not including exactly 3 months ago). Make sure that you use the date() function to calculate the date 3 months ago.</span></li>
+</ol><pre><code class="sql hljs"><span class="hljs-number">1.</span>
+.headers <span class="hljs-keyword">on</span>
+.separator <span class="hljs-string">','</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants;
+
+Name,FoodType,Distance,<span class="hljs-type">Date</span>,Feedback
+Thai Tom,Thai,<span class="hljs-number">15</span>,<span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-04</span>,<span class="hljs-number">1</span>
+Green Island,Chinese,<span class="hljs-number">25</span>,<span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-02</span>,<span class="hljs-number">0</span>
+DTF,Taiwanese,<span class="hljs-number">23</span>,<span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span>,<span class="hljs-number">1</span>
+Poke,Japanese,<span class="hljs-number">10</span>,<span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span>,<span class="hljs-number">0</span>
+<span class="hljs-keyword">Local</span> Point,American,<span class="hljs-number">5</span>,<span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span>,
+
+<span class="hljs-number">2.</span>
+.mode list
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants;
+
+Name<span class="hljs-operator">|</span>FoodType<span class="hljs-operator">|</span>Distance<span class="hljs-operator">|</span><span class="hljs-type">Date</span><span class="hljs-operator">|</span>Feedback
+Thai Tom<span class="hljs-operator">|</span>Thai<span class="hljs-operator">|</span><span class="hljs-number">15</span><span class="hljs-operator">|</span><span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-04</span><span class="hljs-operator">|</span><span class="hljs-number">1</span>
+Green Island<span class="hljs-operator">|</span>Chinese<span class="hljs-operator">|</span><span class="hljs-number">25</span><span class="hljs-operator">|</span><span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-02</span><span class="hljs-operator">|</span><span class="hljs-number">0</span>
+DTF<span class="hljs-operator">|</span>Taiwanese<span class="hljs-operator">|</span><span class="hljs-number">23</span><span class="hljs-operator">|</span><span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span><span class="hljs-operator">|</span><span class="hljs-number">1</span>
+Poke<span class="hljs-operator">|</span>Japanese<span class="hljs-operator">|</span><span class="hljs-number">10</span><span class="hljs-operator">|</span><span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span><span class="hljs-operator">|</span><span class="hljs-number">0</span>
+<span class="hljs-keyword">Local</span> Point<span class="hljs-operator">|</span>American<span class="hljs-operator">|</span><span class="hljs-number">5</span><span class="hljs-operator">|</span><span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span><span class="hljs-operator">|</span>
+
+<span class="hljs-number">3.</span>
+.mode <span class="hljs-keyword">column</span>
+.width <span class="hljs-number">15</span> <span class="hljs-number">15</span> <span class="hljs-number">15</span> <span class="hljs-number">15</span> <span class="hljs-number">15</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants;
+
+Name             FoodType         Distance         <span class="hljs-type">Date</span>             Feedback       
+<span class="hljs-comment">---------------  ---------------  ---------------  ---------------  ---------------</span>
+Thai Tom         Thai             <span class="hljs-number">15</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-04</span>       <span class="hljs-number">1</span>              
+Green Island     Chinese          <span class="hljs-number">25</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-02</span>       <span class="hljs-number">0</span>              
+DTF              Taiwanese        <span class="hljs-number">23</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span>       <span class="hljs-number">1</span>              
+Poke             Japanese         <span class="hljs-number">10</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span>       <span class="hljs-number">0</span>              
+<span class="hljs-keyword">Local</span> Point      American         <span class="hljs-number">5</span>                <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span>
+
+<span class="hljs-number">4.</span>
+<span class="hljs-keyword">SELECT</span> Name, Distance <span class="hljs-keyword">FROM</span> MyRestaurants <span class="hljs-keyword">WHERE</span> Distance <span class="hljs-operator">&gt;=</span> <span class="hljs-number">20</span> <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> Name <span class="hljs-keyword">ASC</span>;                                        
+DTF              <span class="hljs-number">23</span>             
+Green Island     <span class="hljs-number">25</span>
+
+<span class="hljs-number">5.</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants <span class="hljs-keyword">WHERE</span> <span class="hljs-type">Date</span> <span class="hljs-operator">&gt;</span> <span class="hljs-type">DATE</span>(<span class="hljs-string">'now'</span>, <span class="hljs-string">'-3 month'</span>) <span class="hljs-keyword">AND</span> Feedback <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;
+
+Thai Tom         Thai             <span class="hljs-number">15</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-04</span>       <span class="hljs-number">1</span>              
+DTF              Taiwanese        <span class="hljs-number">23</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span>       <span class="hljs-number">1</span>  
+</code></pre><h4 id="Delete" data-id="Delete"><a class="anchor hidden-xs" href="#Delete" title="Delete"><span class="octicon octicon-link"></span></a><span>Delete</span></h4><pre><code class="sql hljs"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> MyRestaurants <span class="hljs-keyword">WHERE</span> Distance <span class="hljs-operator">&gt;</span> <span class="hljs-number">10</span>;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants;
+
+Poke             Japanese         <span class="hljs-number">10</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span>       <span class="hljs-number">0</span>              
+<span class="hljs-keyword">Local</span> Point      American         <span class="hljs-number">5</span>                <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span>   
+</code></pre><h4 id="Update-the-table" data-id="Update-the-table"><a class="anchor hidden-xs" href="#Update-the-table" title="Update-the-table"><span class="octicon octicon-link"></span></a><span>Update the table</span></h4><pre><code class="sql hljs"><span class="hljs-keyword">UPDATE</span> MyRestaurants <span class="hljs-keyword">SET</span> Name <span class="hljs-operator">=</span> <span class="hljs-string">'Poke Bowl'</span> <span class="hljs-keyword">WHERE</span> Distance <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants;
+
+Poke Bowl        Japanese         <span class="hljs-number">10</span>               <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span>       <span class="hljs-number">0</span>              
+<span class="hljs-keyword">Local</span> Point      American         <span class="hljs-number">5</span>                <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span> 
+</code></pre><h4 id="Alter-the-table" data-id="Alter-the-table"><a class="anchor hidden-xs" href="#Alter-the-table" title="Alter-the-table"><span class="octicon octicon-link"></span></a><span>Alter the table</span></h4><ul>
+<li><a href="https://www.sqlitetutorial.net/sqlite-alter-table/" target="_blank" rel="noopener"><span>reference</span></a></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> MyRestaurants RENAME <span class="hljs-type">Date</span> <span class="hljs-keyword">to</span> <span class="hljs-type">Time</span>;
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> MyRestaurants <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">COLUMN</span> Stars;
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> MyRestaurants <span class="hljs-keyword">DROP</span> Distance;
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants;
+
+Name             FoodType         <span class="hljs-type">Time</span>             Feedback         Stars          
+<span class="hljs-comment">---------------  ---------------  ---------------  ---------------  ---------------</span>
+Poke Bowl        Japanese         <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span>       <span class="hljs-number">0</span>                               
+<span class="hljs-keyword">Local</span> Point      American         <span class="hljs-number">2024</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span>  
+</code></pre><h4 id="Type-Affinity" data-id="Type-Affinity"><a class="anchor hidden-xs" href="#Type-Affinity" title="Type-Affinity"><span class="octicon octicon-link"></span></a><span>Type Affinity</span></h4><pre><code class="sql hljs"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Edges <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">'-1'</span>, <span class="hljs-string">'2000'</span>);
+```<span class="hljs-keyword">sql</span>
+There <span class="hljs-keyword">is</span> <span class="hljs-keyword">no</span> error <span class="hljs-keyword">when</span> I input the statement above because <span class="hljs-keyword">of</span> the idea "Type Affinity" <span class="hljs-keyword">in</span> SQLite. <span class="hljs-keyword">To</span> maximize compatibility <span class="hljs-keyword">between</span> SQLite <span class="hljs-keyword">and</span> other database engines, SQLite supports the concept <span class="hljs-keyword">of</span> "type affinity" <span class="hljs-keyword">on</span> columns. <span class="hljs-keyword">For</span> example, if I input <span class="hljs-string">'123'</span> <span class="hljs-keyword">in</span> an <span class="hljs-type">integer</span> <span class="hljs-keyword">column</span>, SQLite will automatically <span class="hljs-keyword">convert</span> this <span class="hljs-keyword">into</span> an integer.
+
+#### <span class="hljs-type">Date</span> <span class="hljs-keyword">function</span>
+<span class="hljs-operator">*</span> [reference](https:<span class="hljs-operator">/</span><span class="hljs-operator">/</span>www.sqlitetutorial.net<span class="hljs-operator">/</span>sqlite<span class="hljs-operator">-</span><span class="hljs-type">date</span><span class="hljs-operator">-</span>functions<span class="hljs-operator">/</span>sqlite<span class="hljs-operator">-</span><span class="hljs-type">date</span><span class="hljs-operator">-</span><span class="hljs-keyword">function</span><span class="hljs-operator">/</span>)
+```<span class="hljs-keyword">sql</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> MyRestaurants <span class="hljs-keyword">WHERE</span> <span class="hljs-type">Date</span> <span class="hljs-operator">&gt;</span> <span class="hljs-type">DATE</span>(<span class="hljs-string">'now'</span>, <span class="hljs-string">'-3 month'</span>) <span class="hljs-keyword">AND</span> Feedback <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;
+</code></pre><h3 id="Order-by" data-id="Order-by"><a class="anchor hidden-xs" href="#Order-by" title="Order-by"><span class="octicon octicon-link"></span></a><span>Order by</span></h3><ul>
+<li><a href="https://www.sqlitetutorial.net/sqlite-order-by/#:~:text=The%20ORDER%20BY%20clause%20comes,The%20ASC%20keyword%20means%20ascending." target="_blank" rel="noopener"><span>reference</span></a></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> Name, Distance <span class="hljs-keyword">FROM</span> MyRestaurants <span class="hljs-keyword">WHERE</span> Distance <span class="hljs-operator">&gt;=</span> <span class="hljs-number">20</span> <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> Name <span class="hljs-keyword">ASC</span>; 
+</code></pre><h2 id="202414-Quiz-Section" data-id="202414-Quiz-Section"><a class="anchor hidden-xs" href="#202414-Quiz-Section" title="202414-Quiz-Section"><span class="octicon octicon-link"></span></a><span>2024/1/4 Quiz Section</span></h2><h3 id="Course-materials1" data-id="Course-materials"><a class="anchor hidden-xs" href="#Course-materials1" title="Course-materials1"><span class="octicon octicon-link"></span></a><span>Course materials</span></h3><ul>
+<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vTRAPfO-drFlA-Qxq-UzyE0aePCQXbIvtvxcpUgh9Bphzm3W3krFKryZCciNkHV3xC5JUu7qaJLrIt6/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.g9cd7810522_0_183" target="_blank" rel="noopener"><span>slides</span></a></li>
+<li><a href="https://drive.google.com/file/d/1GwszQraQIUqS-li7oVlEJVzNBo0vQeVf/view" target="_blank" rel="noopener"><span>Demo code</span></a></li>
+</ul><h3 id="Special-commands" data-id="Special-commands"><a class="anchor hidden-xs" href="#Special-commands" title="Special-commands"><span class="octicon octicon-link"></span></a><span>Special commands</span></h3><pre><code class="sql hljs">.headers <span class="hljs-keyword">on</span><span class="hljs-operator">/</span>off <span class="hljs-operator">/</span><span class="hljs-operator">/</span> <span class="hljs-keyword">show</span><span class="hljs-operator">/</span>hide the <span class="hljs-keyword">column</span> headers <span class="hljs-keyword">in</span> query results
+.mode [type] <span class="hljs-operator">/</span><span class="hljs-operator">/</span> change the type the <span class="hljs-keyword">table</span> display
+.<span class="hljs-keyword">show</span> <span class="hljs-operator">/</span><span class="hljs-operator">/</span> list the display options
+</code></pre><h2 id="202415-Lecture" data-id="202415-Lecture"><a class="anchor hidden-xs" href="#202415-Lecture" title="202415-Lecture"><span class="octicon octicon-link"></span></a><span>2024/1/5 Lecture</span></h2><h3 id="Course-materials2" data-id="Course-materials"><a class="anchor hidden-xs" href="#Course-materials2" title="Course-materials2"><span class="octicon octicon-link"></span></a><span>Course materials</span></h3><ul>
+<li><a href="https://drive.google.com/file/d/1kyVnLTAswHjIBLpVHSlzb73-KvuqDo7r/view" target="_blank" rel="noopener"><span>slides</span></a></li>
+<li><a href="https://drive.google.com/file/d/1gjS_ppvvOpx-Glej_DQ-5REs4xs9UBtS/view" target="_blank" rel="noopener"><span>Demo code</span></a></li>
+</ul><h3 id="Commands" data-id="Commands"><a class="anchor hidden-xs" href="#Commands" title="Commands"><span class="octicon octicon-link"></span></a><span>Commands</span></h3><h4 id="Table" data-id="Table"><a class="anchor hidden-xs" href="#Table" title="Table"><span class="octicon octicon-link"></span></a><span>Table</span></h4><pre><code class="sql hljs">Name             Job              Salary         
+<span class="hljs-comment">---------------  ---------------  ---------------</span>
+<span class="hljs-number">123</span>              TA               <span class="hljs-number">50000</span>          
+<span class="hljs-number">345</span>              TA               <span class="hljs-number">60000</span>          
+<span class="hljs-number">567</span>              Prof             <span class="hljs-number">90000</span>          
+<span class="hljs-number">789</span>              Prof             <span class="hljs-number">100000</span> 
+</code></pre><h4 id="AS" data-id="AS"><a class="anchor hidden-xs" href="#AS" title="AS"><span class="octicon octicon-link"></span></a><span>AS</span></h4><ul>
+<li><a href="https://www.tutorialspoint.com/sqlite/sqlite_alias_syntax.htm" target="_blank" rel="noopener"><span>reference</span></a></li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> P.Name <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P <span class="hljs-keyword">WHERE</span> Name <span class="hljs-operator">&gt;</span> <span class="hljs-number">500</span>;
+```<span class="hljs-keyword">sql</span>
+<span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-keyword">Table</span><span class="hljs-operator">*</span><span class="hljs-operator">*</span>
+```<span class="hljs-keyword">sql</span>
+Name           
+<span class="hljs-comment">---------------</span>
+<span class="hljs-number">567</span>            
+<span class="hljs-number">789</span> 
+</code></pre><h4 id="PRIMARY-KEY" data-id="PRIMARY-KEY"><a class="anchor hidden-xs" href="#PRIMARY-KEY" title="PRIMARY-KEY"><span class="octicon octicon-link"></span></a><span>PRIMARY KEY</span></h4><p><strong><span>Method 1</span></strong></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Payroll (
+UserID <span class="hljs-type">INT</span> <span class="hljs-keyword">PRIMARY</span> KEY,
+Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Job <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Salary <span class="hljs-type">INT</span>);
+</code></pre><p><strong><span>Method 2</span></strong></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Payroll (
+UserID <span class="hljs-type">INT</span>,
+Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Job <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Salary <span class="hljs-type">INT</span>,
+<span class="hljs-keyword">PRIMARY</span> KEY (UserId);
+</code></pre><p><strong><span>Method 3</span></strong></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Payroll (
+Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Job <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Salary <span class="hljs-type">INT</span>,
+<span class="hljs-keyword">PRIMARY</span> KEY (Name, Job));
+```<span class="hljs-keyword">sql</span>
+Sometimes <span class="hljs-keyword">no</span> single attribute <span class="hljs-keyword">is</span> <span class="hljs-keyword">unique</span>, but combinations <span class="hljs-keyword">of</span> attributes <span class="hljs-keyword">are</span> a <span class="hljs-keyword">unique</span> key <span class="hljs-keyword">for</span> the table.
+
+#### <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span>
+Orders <span class="hljs-keyword">result</span> tuples <span class="hljs-keyword">by</span> specified attributes (<span class="hljs-keyword">default</span> ascending)
+```<span class="hljs-keyword">sql</span>
+<span class="hljs-keyword">SELECT</span> P.Name, P.UserID
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P
+<span class="hljs-keyword">WHERE</span> P.Job <span class="hljs-operator">=</span> <span class="hljs-string">'TA'</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> P.Salary, P.Name;
+
+Name             UserID         
+<span class="hljs-comment">---------------  ---------------</span>
+Allison          <span class="hljs-number">345</span>            
+Jack             <span class="hljs-number">123</span>       
+
+<span class="hljs-operator">/</span><span class="hljs-operator">/</span> inverse <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> P.Salary <span class="hljs-keyword">DESC</span>
+</code></pre><h4 id="DISTINCT" data-id="DISTINCT"><a class="anchor hidden-xs" href="#DISTINCT" title="DISTINCT"><span class="octicon octicon-link"></span></a><span>DISTINCT</span></h4><p><span>Deduplicates result tuples</span></p><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> P.Job
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P
+<span class="hljs-keyword">WHERE</span> P.Salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">70000</span>;
+</code></pre><h4 id="Foreign-Key" data-id="Foreign-Key"><a class="anchor hidden-xs" href="#Foreign-Key" title="Foreign-Key"><span class="octicon octicon-link"></span></a><span>Foreign Key</span></h4><ul>
+<li><span>A Foreign Key is one or more attributes that uniquely identify a row in another table.</span></li>
+<li><span>Foreign keys must reference (point to) a unique attribute, almost always a primary key.</span></li>
+</ul><p><strong><span>Method 1</span></strong></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Regist (
+UserID <span class="hljs-type">INT</span> <span class="hljs-keyword">REFERENCES</span> Payroll(UserID),
+Car <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>));
+</code></pre><p><strong><span>Method 2</span></strong><br>
+<span>when attribute name is the same:</span></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Regist (
+UserID <span class="hljs-type">INT</span> 
+    S Payroll,
+Car <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>));
+</code></pre><p><strong><span>Method 3</span></strong></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Payroll (
+UserID <span class="hljs-type">INT</span>,
+Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Job <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Salary <span class="hljs-type">INT</span>,
+<span class="hljs-keyword">PRIMARY</span> KEY(UserID, Name));
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Regist (
+UserID <span class="hljs-type">INT</span>,
+Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Car <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+<span class="hljs-keyword">FOREIGN</span> KEY (UserID, Name)
+<span class="hljs-keyword">REFERENCES</span> Payroll);
+</code></pre><h2 id="202418-Lecture" data-id="202418-Lecture"><a class="anchor hidden-xs" href="#202418-Lecture" title="202418-Lecture"><span class="octicon octicon-link"></span></a><span>2024/1/8 Lecture</span></h2><h3 id="Course-Materials" data-id="Course-Materials"><a class="anchor hidden-xs" href="#Course-Materials" title="Course-Materials"><span class="octicon octicon-link"></span></a><span>Course Materials</span></h3><ul>
+<li><a href="https://drive.google.com/file/d/1yNnomOZx1K_SN0rYWwpOmaAJTV7k8L_r/view" target="_blank" rel="noopener"><span>slides</span></a></li>
+</ul><h3 id="Course-Notes" data-id="Course-Notes"><a class="anchor hidden-xs" href="#Course-Notes" title="Course-Notes"><span class="octicon octicon-link"></span></a><span>Course Notes</span></h3><h4 id="Primary-Key-amp-Select-count" data-id="Primary-Key-amp-Select-count"><a class="anchor hidden-xs" href="#Primary-Key-amp-Select-count" title="Primary-Key-amp-Select-count"><span class="octicon octicon-link"></span></a><span>Primary Key &amp; Select count</span></h4><ul>
+<li><a href="https://www.sqlitetutorial.net/sqlite-primary-key/" target="_blank" rel="noopener"><span>reference</span></a></li>
+</ul><p><span>The following example create a Primary Key and demo the usage of the count function. Also, there is an rumtime error caused by the wrong usage of primary key.</span></p><pre><code class="sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Payroll (
+UserID <span class="hljs-type">INT</span>,
+Name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Job <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+Salary <span class="hljs-type">INT</span>,
+<span class="hljs-keyword">PRIMARY</span> KEY(UserID));
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Payroll <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">123</span>, <span class="hljs-string">'Peter'</span>, <span class="hljs-string">'Student'</span>, <span class="hljs-number">1000</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Payroll <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">234</span>, <span class="hljs-string">'Allison'</span>, <span class="hljs-string">'Student'</span>, <span class="hljs-number">2000</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Payroll <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">234</span>, <span class="hljs-string">'Tim'</span>, <span class="hljs-string">'Engineer'</span>, <span class="hljs-number">10000</span>);
+Runtime error: <span class="hljs-keyword">UNIQUE</span> <span class="hljs-keyword">constraint</span> failed: Payroll.UserID (<span class="hljs-number">19</span>)
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Payroll <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">345</span>, <span class="hljs-string">'Tim'</span>, <span class="hljs-string">'Engineer'</span>, <span class="hljs-number">10000</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Payroll <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">456</span>, <span class="hljs-string">'Christine'</span>, <span class="hljs-string">'Housewife'</span>, <span class="hljs-number">20000</span>);
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Payroll;
+
+UserID  Name       Job        Salary
+<span class="hljs-comment">------  ---------  ---------  ------</span>
+<span class="hljs-number">123</span>     Peter      Student    <span class="hljs-number">1000</span>  
+<span class="hljs-number">234</span>     Allison    Student    <span class="hljs-number">2000</span>  
+<span class="hljs-number">345</span>     Tim        Engineer   <span class="hljs-number">10000</span> 
+<span class="hljs-number">456</span>     Christine  Housewife  <span class="hljs-number">20000</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FROM</span> Payroll;
+
+<span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>)
+<span class="hljs-comment">--------</span>
+<span class="hljs-number">4</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">AS</span> num_people <span class="hljs-keyword">FROM</span> Payroll;
+num_people
+<span class="hljs-comment">----------</span>
+<span class="hljs-number">4</span>  
+</code></pre><h4 id="Foreign-Key1" data-id="Foreign-Key"><a class="anchor hidden-xs" href="#Foreign-Key1" title="Foreign-Key1"><span class="octicon octicon-link"></span></a><span>Foreign Key</span></h4><ul>
+<li><a href="https://www.sqlitetutorial.net/sqlite-foreign-key/" target="_blank" rel="noopener"><span>reference</span></a></li>
+</ul><p><span>The following example create an reference to the primary ket above.</span></p><pre><code class="wrap sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Regist(
+UserID <span class="hljs-type">INT</span>,
+Car <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">100</span>),
+<span class="hljs-keyword">FOREIGN</span> KEY(UserID)
+<span class="hljs-keyword">REFERENCES</span> Payroll);
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Regist <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">123</span>, <span class="hljs-string">'Lexus'</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Regist <span class="hljs-keyword">VALUES</span>(<span class="hljs-number">234</span>, <span class="hljs-string">'BMW'</span>),
+(<span class="hljs-number">234</span>, <span class="hljs-string">'Toyota'</span>),
+(<span class="hljs-number">345</span>, <span class="hljs-string">'Volvo'</span>),
+(<span class="hljs-number">456</span>, <span class="hljs-string">'Tesla'</span>);
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Regist;
+
+UserID  Car   
+<span class="hljs-comment">------  ------</span>
+<span class="hljs-number">123</span>     Lexus 
+<span class="hljs-number">234</span>     BMW   
+<span class="hljs-number">234</span>     Toyota
+<span class="hljs-number">345</span>     Volvo 
+<span class="hljs-number">456</span>     Tesla 
+</code></pre><h4 id="Joins" data-id="Joins"><a class="anchor hidden-xs" href="#Joins" title="Joins"><span class="octicon octicon-link"></span></a><span>Joins</span></h4><ul>
+<li><span>Foreign keys are able to describe a relationship between tables</span></li>
+<li><span>Joins are able to realize combinations of data</span></li>
+<li><span>Joins do not require a foreign key, but often they go together</span></li>
+</ul><ol>
+<li><span>Method 1</span></li>
+</ol><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> P.Name, R.Car <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P <span class="hljs-keyword">JOIN</span> Regist <span class="hljs-keyword">AS</span> R <span class="hljs-keyword">ON</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+Name       Car   
+<span class="hljs-comment">---------  ------</span>
+Peter      Lexus 
+Allison    BMW   
+Allison    Toyota
+Tim        Volvo 
+Christine  Tesla
+
+<span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> Regist <span class="hljs-keyword">WHERE</span> UserID <span class="hljs-operator">=</span> <span class="hljs-number">123</span>;
+<span class="hljs-keyword">SELECT</span> P.Name, R.Car <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P <span class="hljs-keyword">JOIN</span> Regist <span class="hljs-keyword">AS</span> R <span class="hljs-keyword">ON</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+Name       Car   
+<span class="hljs-comment">---------  ------</span>
+Allison    BMW   
+Allison    Toyota
+Tim        Volvo 
+Christine  Tesla 
+</code></pre><ol start="2">
+<li><span>Method 2</span></li>
+</ol><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> P.Name, R.Car <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P, Regist <span class="hljs-keyword">AS</span> R <span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+Name       Car   
+<span class="hljs-comment">---------  ------</span>
+Allison    BMW   
+Allison    Toyota
+Tim        Volvo 
+Christine  Tesla 
+</code></pre><h4 id="Outer-Joins" data-id="Outer-Joins"><a class="anchor hidden-xs" href="#Outer-Joins" title="Outer-Joins"><span class="octicon octicon-link"></span></a><span>Outer Joins</span></h4><ul>
+<li><span>LEFT OUTER JOIN</span>
+<ul>
+<li><span>All rows in left table are preserved</span></li>
+</ul>
+</li>
+<li><span>RIGHT OUTER JOIN</span>
+<ul>
+<li><span>All rows in right table are preserved</span></li>
+</ul>
+</li>
+<li><span>FULL OUTER JOIN</span>
+<ul>
+<li><span>All rows are preserved</span></li>
+</ul>
+</li>
+</ul><pre><code class="sql hljs"><span class="hljs-keyword">SELECT</span> P.Name, R.Car <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> Regist <span class="hljs-keyword">AS</span> R <span class="hljs-keyword">ON</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+Name       Car   
+<span class="hljs-comment">---------  ------</span>
+Peter            
+Allison    BMW   
+Allison    Toyota
+Tim        Volvo 
+Christine  Tesla
+
+<span class="hljs-keyword">SELECT</span> P.Name, R.Car <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P <span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> Regist <span class="hljs-keyword">AS</span> R <span class="hljs-keyword">ON</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+Name       Car   
+<span class="hljs-comment">---------  ------</span>
+Allison    BMW   
+Allison    Toyota
+Tim        Volvo 
+Christine  Tesla
+
+<span class="hljs-keyword">SELECT</span> P.Name, R.Car <span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P <span class="hljs-keyword">FULL</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> Regist <span class="hljs-keyword">AS</span> R <span class="hljs-keyword">ON</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+Name       Car   
+<span class="hljs-comment">---------  ------</span>
+Peter            
+Allison    BMW   
+Allison    Toyota
+Tim        Volvo 
+Christine  Tesla
+
+<span class="hljs-keyword">SELECT</span> P.Name, R.Car
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P, Regist <span class="hljs-keyword">AS</span> R
+<span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-operator">=</span> R.UserID <span class="hljs-keyword">AND</span>
+R.Car <span class="hljs-operator">=</span> <span class="hljs-string">'Volvo'</span>;
+
+Name  Car  
+<span class="hljs-comment">----  -----</span>
+Tim   Volvo
+
+The following example would <span class="hljs-keyword">not</span> work.
+<span class="hljs-keyword">SELECT</span> P.Name, R.Car
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P, Regist <span class="hljs-keyword">AS</span> R
+<span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-operator">=</span> R.UserID <span class="hljs-keyword">AND</span>
+R.Car <span class="hljs-operator">=</span> ‘BMW’ <span class="hljs-keyword">AND</span>
+R.Car <span class="hljs-operator">=</span> ‘Toyota’;
+
+Revised:
+<span class="hljs-keyword">SELECT</span> P.Name, R1.Car
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P, Regist <span class="hljs-keyword">AS</span> R1, Regist <span class="hljs-keyword">AS</span> R2
+<span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-operator">=</span> R1.UserID <span class="hljs-keyword">AND</span>
+P.UserID <span class="hljs-operator">=</span> R2.UserID <span class="hljs-keyword">AND</span>
+R1.Car <span class="hljs-operator">=</span> ‘Civic’ <span class="hljs-keyword">AND</span>
+R2.Car <span class="hljs-operator">=</span> ‘Pinto’;
+</code></pre><h2 id="2024110-Lecture" data-id="2024110-Lecture"><a class="anchor hidden-xs" href="#2024110-Lecture" title="2024110-Lecture"><span class="octicon octicon-link"></span></a><span>2024/1/10 Lecture</span></h2><h3 id="Course-Materials1" data-id="Course-Materials"><a class="anchor hidden-xs" href="#Course-Materials1" title="Course-Materials1"><span class="octicon octicon-link"></span></a><span>Course Materials</span></h3><ul>
+<li><a href="https://drive.google.com/file/d/1hVJQmvUntSzRJsN7x4I5j2Tb75Rt-8Ao/view" target="_blank" rel="noopener"><span>slide</span></a></li>
+</ul><h3 id="Course-Notes1" data-id="Course-Notes"><a class="anchor hidden-xs" href="#Course-Notes1" title="Course-Notes1"><span class="octicon octicon-link"></span></a><span>Course Notes</span></h3><h4 id="Aggregates" data-id="Aggregates"><a class="anchor hidden-xs" href="#Aggregates" title="Aggregates"><span class="octicon octicon-link"></span></a><span>Aggregates</span></h4><ul>
+<li><span>COUNT</span></li>
+<li><span>AVG</span></li>
+<li><span>MAX</span></li>
+<li><span>MIN</span></li>
+<li><span>SUM</span></li>
+</ul><pre><code class="wrap sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Payroll;
+
+UserID  Name       Job        Salary
+<span class="hljs-comment">------  ---------  ---------  ------</span>
+<span class="hljs-number">123</span>     Peter      Student    <span class="hljs-number">1000</span>  
+<span class="hljs-number">234</span>     Allison    Student    <span class="hljs-number">2000</span>  
+<span class="hljs-number">345</span>     Tim        Engineer   <span class="hljs-number">10000</span> 
+<span class="hljs-number">456</span>     Christine  Housewife  <span class="hljs-number">20000</span> 
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">AS</span> People,
+<span class="hljs-built_in">AVG</span>(P.Salary) <span class="hljs-keyword">AS</span> AVG,
+<span class="hljs-built_in">SUM</span>(P.Salary) <span class="hljs-keyword">AS</span> SUM,
+<span class="hljs-built_in">MAX</span>(P.Salary) <span class="hljs-keyword">AS</span> MAX,
+<span class="hljs-built_in">MIN</span>(P.Salary) <span class="hljs-keyword">AS</span> MIN
+<span class="hljs-keyword">FROM</span> Payroll;
+
+People  AVG     SUM    MAX    MIN 
+<span class="hljs-comment">------  ------  -----  -----  ----</span>
+<span class="hljs-number">4</span>       <span class="hljs-number">8250.0</span>  <span class="hljs-number">33000</span>  <span class="hljs-number">20000</span>  <span class="hljs-number">1000</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span>(P.Salary)
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P, Regist <span class="hljs-keyword">AS</span> R
+<span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-operator">=</span> R.UserID;
+
+<span class="hljs-built_in">AVG</span>(P.Salary)
+<span class="hljs-comment">-------------</span>
+<span class="hljs-number">8500.0</span> 
+</code></pre><h4 id="Grouping" data-id="Grouping"><a class="anchor hidden-xs" href="#Grouping" title="Grouping"><span class="octicon octicon-link"></span></a><span>Grouping</span></h4><pre><code class="wrap sql hljs"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Payroll;
+UserID  Name       Job        Salary
+<span class="hljs-comment">------  ---------  ---------  ------</span>
+<span class="hljs-number">123</span>     Peter      Student    <span class="hljs-number">1000</span>  
+<span class="hljs-number">234</span>     Allison    Student    <span class="hljs-number">2000</span>  
+<span class="hljs-number">345</span>     Tim        Engineer   <span class="hljs-number">10000</span> 
+<span class="hljs-number">456</span>     Christine  Housewife  <span class="hljs-number">20000</span> 
+
+<span class="hljs-keyword">SELECT</span> Job, <span class="hljs-built_in">AVG</span>(Salary)
+<span class="hljs-keyword">FROM</span> Payroll
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> Job;
+
+Job        <span class="hljs-built_in">AVG</span>(Salary)
+<span class="hljs-comment">---------  -----------</span>
+Engineer   <span class="hljs-number">10000.0</span>    
+Housewife  <span class="hljs-number">20000.0</span>    
+Student    <span class="hljs-number">1500.0</span>
+
+<span class="hljs-keyword">SELECT</span> Job, <span class="hljs-built_in">AVG</span>(Salary)
+<span class="hljs-keyword">FROM</span> Payroll
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> Job
+<span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">AVG</span>(SALARY) <span class="hljs-operator">&gt;</span> <span class="hljs-number">8000</span>;
+
+Job        <span class="hljs-built_in">AVG</span>(Salary)
+<span class="hljs-comment">---------  -----------</span>
+Engineer   <span class="hljs-number">10000.0</span>    
+Housewife  <span class="hljs-number">20000.0</span> 
+</code></pre><h4 id="FWGHOS" data-id="FWGHOS"><a class="anchor hidden-xs" href="#FWGHOS" title="FWGHOS"><span class="octicon octicon-link"></span></a><span>FWGHOS</span></h4><p><span>SELECT: Last evaluate the SELECT clause</span><br>
+<span>FROM: First evaluate the FROM clause</span><br>
+<span>WHERE: Next evaluate the WHERE clause</span><br>
+<span>GROUP BY: Group the attributes in the GROUPBY</span><br>
+<span>HAVING: Eliminate groups based on HAVING</span><br>
+<span>ORDER BY: Sort the results based on ORDER BY</span></p><h2 id="2024111-Quiz-Section" data-id="2024111-Quiz-Section"><a class="anchor hidden-xs" href="#2024111-Quiz-Section" title="2024111-Quiz-Section"><span class="octicon octicon-link"></span></a><span>2024/1/11 Quiz Section</span></h2><h3 id="Course-Materials2" data-id="Course-Materials"><a class="anchor hidden-xs" href="#Course-Materials2" title="Course-Materials2"><span class="octicon octicon-link"></span></a><span>Course Materials</span></h3><ul>
+<li><a href="https://docs.google.com/presentation/d/1aCvChaPlSJhSpe8VPgyWTOzJmgJ-4X6WpzFb7WQAnKM/edit#slide=id.p1" target="_blank" rel="noopener"><span>slide</span></a></li>
+<li><a href="https://docs.google.com/document/d/1Th5E2-tKiRx64LOiio8Bb3wzLWGi_gLFLk9UFEa1t2A/edit" target="_blank" rel="noopener"><span>worksheet</span></a></li>
+<li><a href="https://docs.google.com/document/d/13lI9lP_CFgOpBlEu-XSclVqRE19TgoSN/edit" target="_blank" rel="noopener"><span>worksheet solution</span></a></li>
+</ul><h3 id="Course-Notes2" data-id="Course-Notes"><a class="anchor hidden-xs" href="#Course-Notes2" title="Course-Notes2"><span class="octicon octicon-link"></span></a><span>Course Notes</span></h3><h4 id="Worksheet" data-id="Worksheet"><a class="anchor hidden-xs" href="#Worksheet" title="Worksheet"><span class="octicon octicon-link"></span></a><span>Worksheet</span></h4><pre><code class="wrap sql hljs"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> A (a <span class="hljs-type">int</span>);
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> B (b <span class="hljs-type">int</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> A <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>), (<span class="hljs-number">2</span>), (<span class="hljs-number">3</span>), (<span class="hljs-number">4</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> B <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">3</span>), (<span class="hljs-number">4</span>), (<span class="hljs-number">5</span>), (<span class="hljs-number">6</span>);
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> A <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> B <span class="hljs-keyword">ON</span> A.a <span class="hljs-operator">=</span> B.b;
+
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> A <span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> B <span class="hljs-keyword">ON</span> A.a <span class="hljs-operator">=</span> B.b;
+
+<span class="hljs-number">1</span><span class="hljs-operator">|</span>
+<span class="hljs-number">2</span><span class="hljs-operator">|</span>
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> A <span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> B <span class="hljs-keyword">ON</span> A.a <span class="hljs-operator">=</span> B.b;
+
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+<span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-operator">|</span><span class="hljs-number">6</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> A <span class="hljs-keyword">FULL</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> B <span class="hljs-keyword">ON</span> A.a <span class="hljs-operator">=</span> B.b;
+
+<span class="hljs-number">1</span><span class="hljs-operator">|</span>
+<span class="hljs-number">2</span><span class="hljs-operator">|</span>
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+<span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-operator">|</span><span class="hljs-number">6</span>
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> A <span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> B;
+
+<span class="hljs-number">1</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">1</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+<span class="hljs-number">1</span><span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-number">1</span><span class="hljs-operator">|</span><span class="hljs-number">6</span>
+<span class="hljs-number">2</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">2</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+<span class="hljs-number">2</span><span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-number">2</span><span class="hljs-operator">|</span><span class="hljs-number">6</span>
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-number">3</span><span class="hljs-operator">|</span><span class="hljs-number">6</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">3</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">4</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">5</span>
+<span class="hljs-number">4</span><span class="hljs-operator">|</span><span class="hljs-number">6</span>
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Employees (id <span class="hljs-type">int</span>, boss <span class="hljs-type">int</span>);
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> Employees <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">123</span>, <span class="hljs-number">1</span>), (<span class="hljs-number">234</span>, <span class="hljs-number">1</span>), (<span class="hljs-number">345</span>, <span class="hljs-number">2</span>), (<span class="hljs-number">123</span>, <span class="hljs-number">1</span>), (<span class="hljs-number">234</span>, <span class="hljs-number">2</span>), (<span class="hljs-number">456</span>, <span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> Employees;
+
+<span class="hljs-number">123</span><span class="hljs-operator">|</span><span class="hljs-number">1</span>
+<span class="hljs-number">234</span><span class="hljs-operator">|</span><span class="hljs-number">1</span>
+<span class="hljs-number">345</span><span class="hljs-operator">|</span><span class="hljs-number">2</span>
+<span class="hljs-number">123</span><span class="hljs-operator">|</span><span class="hljs-number">1</span>
+<span class="hljs-number">234</span><span class="hljs-operator">|</span><span class="hljs-number">2</span>
+<span class="hljs-number">456</span><span class="hljs-operator">|</span><span class="hljs-number">1</span>
+</code></pre><h2 id="2024112-Lecture" data-id="2024112-Lecture"><a class="anchor hidden-xs" href="#2024112-Lecture" title="2024112-Lecture"><span class="octicon octicon-link"></span></a><span>2024/1/12 Lecture</span></h2><h3 id="Course-Materials3" data-id="Course-Materials"><a class="anchor hidden-xs" href="#Course-Materials3" title="Course-Materials3"><span class="octicon octicon-link"></span></a><span>Course Materials</span></h3><ul>
+<li><a href="https://drive.google.com/file/d/1K2XKmQNxEdrVGjr4HiTGgw7D6eETVP_Z/view" target="_blank" rel="noopener"><span>slide</span></a></li>
+</ul><h3 id="Course-Notes3" data-id="Course-Notes"><a class="anchor hidden-xs" href="#Course-Notes3" title="Course-Notes3"><span class="octicon octicon-link"></span></a><span>Course Notes</span></h3><p><span>SELECT, HAVING, ORDER BY Must use aggregate functions or attributes in GROUP BY</span></p><h2 id="2024117-Lecture" data-id="2024117-Lecture"><a class="anchor hidden-xs" href="#2024117-Lecture" title="2024117-Lecture"><span class="octicon octicon-link"></span></a><span>2024/1/17 Lecture</span></h2><ul>
+<li><a href="https://drive.google.com/file/d/1M6QLddHfyGbhI5ILYCuZSj59lHXH5P_d/view" target="_blank" rel="noopener"><span>slide</span></a></li>
+</ul><h3 id="Subquery" data-id="Subquery"><a class="anchor hidden-xs" href="#Subquery" title="Subquery"><span class="octicon octicon-link"></span></a><span>Subquery</span></h3><pre><code class="wrap sql hljs">UserID  Name       Job        Salary
+<span class="hljs-comment">------  ---------  ---------  ------</span>
+<span class="hljs-number">123</span>     Peter      Student    <span class="hljs-number">1000</span>  
+<span class="hljs-number">234</span>     Allison    Student    <span class="hljs-number">2000</span>  
+<span class="hljs-number">345</span>     Tim        Engineer   <span class="hljs-number">10000</span> 
+<span class="hljs-number">456</span>     Christine  Housewife  <span class="hljs-number">20000</span>
+
+<span class="hljs-keyword">SELECT</span> P.Name
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span>
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P1
+<span class="hljs-keyword">WHERE</span> P.Job <span class="hljs-operator">=</span> P1.Job <span class="hljs-keyword">AND</span>
+P.UserID <span class="hljs-operator">!=</span> P1.UserID);
+
+Name     
+<span class="hljs-comment">---------</span>
+Tim      
+Christine
+
+<span class="hljs-keyword">SELECT</span> P.Name, P.Salary
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P
+<span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-keyword">IN</span> (<span class="hljs-keyword">SELECT</span> UserID
+<span class="hljs-keyword">FROM</span> Regist)
+
+Name       Salary
+<span class="hljs-comment">---------  ------</span>
+Allison    <span class="hljs-number">2000</span>  
+Tim        <span class="hljs-number">10000</span> 
+Christine  <span class="hljs-number">20000</span> 
+</code></pre><h3 id="Monotonicity" data-id="Monotonicity"><a class="anchor hidden-xs" href="#Monotonicity" title="Monotonicity"><span class="octicon octicon-link"></span></a><span>Monotonicity</span></h3><ul>
+<li><span>Monotonic query is one that obeys the following rule where I and J are data instances and q() are the results of running the query q on those instances:</span>
+<ul>
+<li><span>That is for any superset of I, the query over that superset must contain at least the query results of I.</span></li>
+<li><span>In other words, adding more tuples to the input table never removes tuples from the output on the next query.</span></li>
+</ul>
+</li>
+<li><span>Theorem: If Q is a SELECT-FROM-WHERE query that does not have subqueries, and no aggregates, then it is monotone.</span></li>
+<li><span>Proof: We use the nested loop semantics: if we insert a tuple in a relation Ri , this will not remove any tuples from the answer.</span></li>
+<li><span>Consequence: If a query is not monotonic, then we cannot write it as a SELECT-FROM-WHERE query without nested subqueries or aggregates.</span></li>
+</ul><pre><code class="wrap sql hljs"><span class="hljs-number">1.</span> a Monotonic query
+<span class="hljs-keyword">SELECT</span> P.Name, P.Car
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P, Regist <span class="hljs-keyword">AS</span> R
+<span class="hljs-keyword">WHERE</span> P.UserID <span class="hljs-operator">=</span> R.UserID
+
+<span class="hljs-number">2.</span> <span class="hljs-keyword">not</span> a Monotonic query
+
+<span class="hljs-keyword">SELECT</span> P.Name
+<span class="hljs-keyword">FROM</span> Payroll <span class="hljs-keyword">AS</span> P
+<span class="hljs-keyword">WHERE</span> P.Salary <span class="hljs-operator">&gt;=</span> <span class="hljs-keyword">ALL</span> (<span class="hljs-keyword">SELECT</span> Salary
+<span class="hljs-keyword">FROM</span> Payroll)
+</code></pre><h2 id="2024118-Quiz-Section" data-id="2024118-Quiz-Section"><a class="anchor hidden-xs" href="#2024118-Quiz-Section" title="2024118-Quiz-Section"><span class="octicon octicon-link"></span></a><span>2024/1/18 Quiz Section</span></h2><ul>
+<li><a href="https://docs.google.com/presentation/d/1jW8eL5ILPIVRD37AcN7P1UH8ZWzkKj3Q73qVsBEzlUo/edit" target="_blank" rel="noopener"><span>slide</span></a></li>
+<li><a href="https://docs.google.com/document/d/14uvjmTbrQaA9Pahq-YrXCtqG4cUoDYF1/edit#heading=h.vfe0kcwpk4jc" target="_blank" rel="noopener"><span>worksheet</span></a></li>
+</ul><h2 id="202421-Lecture" data-id="202421-Lecture"><a class="anchor hidden-xs" href="#202421-Lecture" title="202421-Lecture"><span class="octicon octicon-link"></span></a><span>2024/2/1 Lecture</span></h2></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#UW-CSE-414" title="UW CSE 414">UW CSE 414</a><ul class="nav">
+<li><a href="#Resource" title="Resource">Resource</a></li>
+<li><a href="#202413-Leture" title="2024/1/3 Leture">2024/1/3 Leture</a><ul class="nav">
+<li><a href="#Course-materials" title="Course materials">Course materials</a></li>
+<li><a href="#Database-Management-System-DBMSs" title="Database Management System (DBMSs)">Database Management System (DBMSs)</a></li>
+<li><a href="#3-parts-of-a-Data-Model" title="3 parts of a Data Model">3 parts of a Data Model</a></li>
+</ul>
+</li>
+<li><a href="#HW1" title="HW1">HW1</a><ul class="nav">
+<li><a href="#Resource1" title="Resource">Resource</a></li>
+<li><a href="#basic-command" title="basic command">basic command</a></li>
+<li><a href="#Order-by" title="Order by">Order by</a></li>
+</ul>
+</li>
+<li><a href="#202414-Quiz-Section" title="2024/1/4 Quiz Section">2024/1/4 Quiz Section</a><ul class="nav">
+<li><a href="#Course-materials1" title="Course materials">Course materials</a></li>
+<li><a href="#Special-commands" title="Special commands">Special commands</a></li>
+</ul>
+</li>
+<li><a href="#202415-Lecture" title="2024/1/5 Lecture">2024/1/5 Lecture</a><ul class="nav">
+<li><a href="#Course-materials2" title="Course materials">Course materials</a></li>
+<li><a href="#Commands" title="Commands">Commands</a></li>
+</ul>
+</li>
+<li><a href="#202418-Lecture" title="2024/1/8 Lecture">2024/1/8 Lecture</a><ul class="nav">
+<li><a href="#Course-Materials" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024110-Lecture" title="2024/1/10 Lecture">2024/1/10 Lecture</a><ul class="nav">
+<li><a href="#Course-Materials1" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes1" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024111-Quiz-Section" title="2024/1/11 Quiz Section">2024/1/11 Quiz Section</a><ul class="nav">
+<li><a href="#Course-Materials2" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes2" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024112-Lecture" title="2024/1/12 Lecture">2024/1/12 Lecture</a><ul class="nav">
+<li><a href="#Course-Materials3" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes3" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024117-Lecture" title="2024/1/17 Lecture">2024/1/17 Lecture</a><ul class="nav">
+<li><a href="#Subquery" title="Subquery">Subquery</a></li>
+<li><a href="#Monotonicity" title="Monotonicity">Monotonicity</a></li>
+</ul>
+</li>
+<li><a href="#2024118-Quiz-Section" title="2024/1/18 Quiz Section">2024/1/18 Quiz Section</a></li>
+<li class=""><a href="#202421-Lecture" title="2024/2/1 Lecture">2024/2/1 Lecture</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#UW-CSE-414" title="UW CSE 414">UW CSE 414</a><ul class="nav">
+<li><a href="#Resource" title="Resource">Resource</a></li>
+<li><a href="#202413-Leture" title="2024/1/3 Leture">2024/1/3 Leture</a><ul class="nav">
+<li><a href="#Course-materials" title="Course materials">Course materials</a></li>
+<li><a href="#Database-Management-System-DBMSs" title="Database Management System (DBMSs)">Database Management System (DBMSs)</a></li>
+<li><a href="#3-parts-of-a-Data-Model" title="3 parts of a Data Model">3 parts of a Data Model</a></li>
+</ul>
+</li>
+<li><a href="#HW1" title="HW1">HW1</a><ul class="nav">
+<li><a href="#Resource1" title="Resource">Resource</a></li>
+<li><a href="#basic-command" title="basic command">basic command</a></li>
+<li><a href="#Order-by" title="Order by">Order by</a></li>
+</ul>
+</li>
+<li><a href="#202414-Quiz-Section" title="2024/1/4 Quiz Section">2024/1/4 Quiz Section</a><ul class="nav">
+<li><a href="#Course-materials1" title="Course materials">Course materials</a></li>
+<li><a href="#Special-commands" title="Special commands">Special commands</a></li>
+</ul>
+</li>
+<li><a href="#202415-Lecture" title="2024/1/5 Lecture">2024/1/5 Lecture</a><ul class="nav">
+<li><a href="#Course-materials2" title="Course materials">Course materials</a></li>
+<li><a href="#Commands" title="Commands">Commands</a></li>
+</ul>
+</li>
+<li><a href="#202418-Lecture" title="2024/1/8 Lecture">2024/1/8 Lecture</a><ul class="nav">
+<li><a href="#Course-Materials" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024110-Lecture" title="2024/1/10 Lecture">2024/1/10 Lecture</a><ul class="nav">
+<li><a href="#Course-Materials1" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes1" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024111-Quiz-Section" title="2024/1/11 Quiz Section">2024/1/11 Quiz Section</a><ul class="nav">
+<li><a href="#Course-Materials2" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes2" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024112-Lecture" title="2024/1/12 Lecture">2024/1/12 Lecture</a><ul class="nav">
+<li><a href="#Course-Materials3" title="Course Materials">Course Materials</a></li>
+<li><a href="#Course-Notes3" title="Course Notes">Course Notes</a></li>
+</ul>
+</li>
+<li><a href="#2024117-Lecture" title="2024/1/17 Lecture">2024/1/17 Lecture</a><ul class="nav">
+<li><a href="#Subquery" title="Subquery">Subquery</a></li>
+<li><a href="#Monotonicity" title="Monotonicity">Monotonicity</a></li>
+</ul>
+</li>
+<li><a href="#2024118-Quiz-Section" title="2024/1/18 Quiz Section">2024/1/18 Quiz Section</a></li>
+<li class=""><a href="#202421-Lecture" title="2024/2/1 Lecture">2024/2/1 Lecture</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
