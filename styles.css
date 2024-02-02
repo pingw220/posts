@@ -261,6 +261,9 @@
 .footer_content {
     font-family: Georgia, serif;
 }
+.icon :hover {
+    color: lightblue;
+}
 
 a:link {
     color: black;
