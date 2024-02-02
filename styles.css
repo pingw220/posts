@@ -26,12 +26,18 @@
     font-family: Georgia, serif;
     color: black;
 }
+.home :hover {
+    color: white;
+}
 .about{
     width: 10%;
     text-align:center;
     font-size: 20px;
     font-family: Georgia, serif;
     color: black;
+}
+.about :hover{
+    color: white;
 }
 .projects{
     width: 10%;
@@ -40,6 +46,9 @@
     font-size: 20px;
     color: black;
 }
+.projects :hover{
+    color: white;
+}
 .posts{
     width: 10%;
     text-align:center;
@@ -47,12 +56,18 @@
     font-size: 20px;
     color: black;
 }
+.posts :hover{
+    color: white;
+}
 .cello{
     width: 10%;
     text-align:center;
     font-size: 20px;
     font-family: Georgia, serif;
     color: black;
+}
+.cello :hover{
+    color: white;
 }
 .list2{
     display:none;
