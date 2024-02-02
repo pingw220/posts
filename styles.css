@@ -233,6 +233,7 @@
 
 .footer {
     display: flex;
+    gap: 20px;
     height: 70px;
     align-items: center;
     justify-content: center;
