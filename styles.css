@@ -150,6 +150,7 @@
 }
 .section1{
     display: flex;
+    border-radius: 25px;
     flex-direction: column;
     width: 600px;
     height:450px;
