@@ -3,7 +3,7 @@
 }
 .headline {
     display: grid;
-    grid-template-columns: 44% 26% 29%;
+    grid-template-columns: 46% 24% 29%;
     background-image: url(resource/posts.png);
     background-size: cover;
     height: 550px;
