@@ -1,144 +1,107 @@
 * {
-    margin: 0; /*make the webpage fill out the window*/
+    margin: 0; /* make the webpage fill out the window */
 }
-.headline{
-    display: flex;
-    background-color: #E8C872;
-    height: 70px;
-    align-items: center;
+.headline {
+    display: grid;
+    grid-template-columns: 44% 26% 29%;
+    background-image: url(resource/posts.png);
+    background-size: cover;
+    height: 550px;
     font-family: Georgia, serif;
-}
-.name{
     font-size: 30px;
+    color: white;
+    align-items: center;
+    font-family: Cursive;
+}
+.name {
+    align-self: start;
+    margin-top: 20px;
+    margin-left: 30px;
     font-weight: bold;
     font-family: Georgia, serif;
-    margin-left:10px;
 }
-.category{
+.category {
+    align-self: start;
     display: flex;
+    margin-top: 20px;
+    gap: 30px;
     justify-content: flex-end; /*go to the left*/
     flex: auto;
 }
-.home{
-    width: 10%;
+.home {
+    width: 15%;
+}
+.home a {
     text-align:center;
     font-size: 20px;
     font-family: Georgia, serif;
-    color: black;
+    color: white;
+    text-decoration: none;
 }
 .home :hover {
-    color: white;
+    color: gray;
 }
-.about{
-    width: 10%;
+.about {
+    width: 15%;
+}
+.about a {
     text-align:center;
     font-size: 20px;
     font-family: Georgia, serif;
-    color: black;
-}
-.about :hover{
     color: white;
+    text-decoration: none;
 }
-.projects{
-    width: 10%;
+.about :hover {
+    color: gray;
+}
+.projects {
+    width: 15%;
+}
+.projects a {
     text-align:center;
     font-family: Georgia, serif;
     font-size: 20px;
-    color: black;
-}
-.projects :hover{
     color: white;
+    text-decoration: none;
 }
-.posts{
-    width: 10%;
+.projects :hover {
+    color: gray;
+}
+.posts {
+    width: 15%;
+}
+.posts a {
     text-align:center;
     font-family: Georgia, serif;
     font-size: 20px;
-    color: black;
-}
-.posts :hover{
     color: white;
+    text-decoration: none;
 }
-.cello{
+.posts :hover {
+    color: gray;
+}
+.cello {
     width: 10%;
+    margin-right: 30px;
+}
+.cello a {
     text-align:center;
     font-size: 20px;
     font-family: Georgia, serif;
-    color: black;
-}
-.cello :hover{
     color: white;
+    text-decoration: none;
+   
 }
-.list2{
-    display:none;
-    position:fixed;
-    background-color: #FFF3CF;
-    top: 10px;
-    right: 10px;
-    width:100px;
-    height:400px;
+.cello :hover {
+    color: gray;
 }
-.it0{
+.welcome {
     display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80px;
-    background-color: #FFF3CF;
-}
-.it1{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80px;
-    background-color: #FFF3CF;
-}
-.it2{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80px;
-    background-color: #FFF3CF;
-}
-.it3{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80px;
-    background-color: #FFF3CF;
-}
-.it4{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:80px;
-    background-color: #FFF3CF;
-}
-.listpicture{
-    display:flex;
-    width:50%;
-    text-align:end;
-    flex:auto;
-    margin:10px;
-    display:none;
-}
-
-.welcome1{
     justify-content:center;
     align-items:center;
     position: inline-block;
     height:300px;
-    background-color:#C9D7DD;
-    display:flex;
-    font-family: Georgia, serif;
-}
-.welcome2{
-    justify-content:center;
-    align-items:center;
-    position: inline-block;
-    height:300px;
-    background-color:#C9D7DD;
-    display:none;
-    font-family: Georgia, serif;
+    background: linear-gradient(100deg, rgb(75, 188, 226),#C9D7DD);
 }
 .text{
     text-align: center;
@@ -155,6 +118,8 @@
     font-size:30px;
     font-weight:bold;
     font-family: Georgia, serif;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .section{
@@ -182,22 +147,26 @@
     align-items:center;
 }
 .section1 img{
-    width:90%;
+    width: 90%;
     height:90%;
+    justify-content:center;
+    align-items:center;
 }
 .section2{
     display:flex;
+    border-radius: 25px;
+    flex-direction: column;
     flex:none;
     width:45%;
-    height:400px;
+    height:450px;
     margin:10px;
     background-color: #637A9F;
     justify-content:center;
     align-items:center;
 }
 .section2 iframe{
-    width:90%;
-    height:90%;
+    width:80%;
+    height:80%;
     justify-content:center;
     align-items:center;
 }
@@ -210,7 +179,18 @@
     font-size: 20px;
     font-weight: bold;
     color: black;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+.subtitle1 {
+    display: flex;
+    text-align:center;
+    align-items: center;
+    justify-items: center;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
 }
 .subinfo {
     display: flex;
@@ -220,36 +200,39 @@
     font-family: Georgia, serif;
     font-size: 20px;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+.subinfo a {
+    color: black;
+    text-decoration: none;
 }
 .subinfo :hover {
     color: white;
 }
-.t1{
-    font-size:20px;
-    font-weight:bold;
+.section2{
+    display:flex;
+    flex:none;
+    width:45%;
+    height:400px;
+    margin:10px;
+    background-color: #637A9F;
+    justify-content:center;
+    align-items:center;
+    font-family: Georgia, serif;
 }
-.t2{
-    font-size:20px;
-    font-weight:bold;
+.section2 a{
+    width:90%;
+    height:90%;
+    justify-content:center;
+    align-items:center;
 }
-.t3{
-    font-size:20px;
-    font-weight:bold;
+.section2 img{
+    width:100%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
 }
-.t4{
-    font-size:20px;
-    font-weight:bold;
-}
-@media (max-width:500px){
-    .list1{
-        display:none;
-    }
-    .listpicture{
-        display:block;
-    }
-}
-
+/* footer */
 .footer {
     display: flex;
     gap: 20px;
@@ -261,29 +244,9 @@
 .footer_content {
     font-family: Georgia, serif;
 }
+.icon a {
+    color: black;
+}
 .icon :hover {
     color: lightblue;
 }
-
-a:link {
-    color: black;
-    text-decoration: none;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: black;
-    text-decoration: none;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: black;
-    text-decoration: none;
-  }
-  
-  /* selected link */
-  a:active {
-    color: black;
-    text-decoration: none;
-  }
